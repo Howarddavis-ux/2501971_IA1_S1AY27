@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=cognition_2');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=commit');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=work');
 :root{
     --primary-bg: white;
-    --font-color: black;
+    --font-color: #000000;
     --blur-color:rgba(211, 211, 211, 0.384);
+    --container-color: #d9d9d931;
 
 }
 body{
@@ -17,26 +19,46 @@ body{
     position: relative;
     color: var(--font-color);
     background-color: var(--primary-bg);
-    overflow-x: clip;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+#master{
+    margin-top: 80px;
+    padding: min(4vw, 40);
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.heading{
+    height: auto;
+    width: auto;
+    padding: 0px;
+    margin: 0px;
+    flex: 1 1 620px;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    vertical-align: middle;
 }
 /*******Home******/
 /*Navigation*/
-a {
-    padding: 16px 16px;
-    text-decoration: none;
-    color: var(--font-color);
-    font-weight: bold;
-    justify-content: center;
+@media screen and (max-width: 800px) {
+    
 }
 
+
 header{
-    margin: 6px;
     display: flex;
     top: 0;
     justify-content: center;
     align-items: center;
     position: fixed;   /* Keeps the navbar in a static position on the screen */
-    top: 0;   
+    top: 6px;   
     width: 100%;      
     z-index: 1000;
     color: var(--font-color);
@@ -46,6 +68,14 @@ header{
 header a.name{
     text-decoration: none;
     font-size: 18px;
+}
+
+a {
+    padding: 16px 16px;
+    text-decoration: none;
+    color: var(--font-color);
+    font-weight: bold;
+    justify-content: center;
 }
 
 .navBar{
@@ -107,27 +137,17 @@ ul.nav-links li:hover{
     /*Both icon and links would not change together*/
 }
 /*Content*/
-#master{
-    margin-top: 40px;
-    padding: 40px;
-    width: 100vw;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
 
-.container{
+.home-container{
     width: min(99vw, 1500px);
-    min-height: 300px;
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: clip;
 }
 
-div.container div{
+div.home-container div{
     height: auto;
     width: auto;
     flex: 1 1 620px;
@@ -135,14 +155,14 @@ div.container div{
     line-height: 0.9;
     letter-spacing: -0.06em;
     vertical-align: middle;
-    overflow: hidden;
+    overflow: clip;
 }
 
-div.container p{
+.home-container p{
     font-size: 50px;
     letter-spacing: 0em;
 }
-img{
+.home-container img{
         /* width: clamp(220px, 29vw, 420px);*/
     width: 350px;
     max-width: 100%;
@@ -152,39 +172,180 @@ img{
     flex-shrink: 0;
     object-fit: contain;
 }
+/******Professional********/
+.professional-container{
+    width: min(99vw, 1500px);
+    min-height: 300px;
+    border-radius: 15px;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+}
+
+.professional-container img{
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    border-style: solid;
+    border-radius: 10px;
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+.professional-container div{
+    height: auto;
+    width: auto;
+    margin-top: 50px;
+    flex: 1 1 620px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.professional-container a{
+    padding: 10px;
+    position: relative;
+    top: 40px;
+    border: #000000;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 11px;
+    font-weight:bold;
+    letter-spacing: -0.02em;
+    font-size: 20px;
+    text-align: center;
+}
+
+.professional-container p{
+    position: relative;
+    left: 4px;
+}
+.experience-container{
+    width: min(99vw, 1500px);
+    min-height: 300px;
+    align-items: top;
+    justify-content: space-between;
+
+}
+
+#error-container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
+    line-height: 0.9;
+
+}
+#error{
+    position: relative;
+    font-size:20px;
+    right: 128px;
+}
+#number{
+    font-size: 150px;
+}
+
+
+
+
+
 
 /******Personality********/
-.selectable{
-    width: 963px;
-    height: 324px;
+
+@media screen and (max-width: 960px) {
+    .personality{
+        flex-direction:column
+    } 
+}
+
+.personality{
+    width: min(99vw, 1500px);
+    min-height: 300px;
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
     display: flex;
+    align-items: top;
     justify-content: space-between;
-    background-color: var(--blur-color);
-    backdrop-filter: blur(10px); 
+    background-color: var(--container-color);
+    backdrop-filter: blur(10px);
+    
+
+
+}
+.personality img{
+    width: 324px;
+    height: 324px;
+    border-radius: 10px;
+    margin-right: 10px;
+    float: left;
+}
+.personality p{
+    font-family: "Roboto", sans-serif;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 20px;
+    float: left;
+}
+.selectable{
+    width: 1000px;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    display: flex; 
+}
+.item-label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.label-art{
+    display: block;
+    flex: 0 0 50px;
+    width: 50px;       
+    height: 50px;
+    border-radius: 5px;        
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 1/1;
+}
+.Window-art{
+    background-image: url('/Assets/Window_Shopper.jpg');
+}
+.Kante-art{
+    background-image: url('/Assets/Kante.jpg');
+}
+.Wetin-art{
+    background-image: url('/Assets/Wetin.png');
+}
+.Revolution-art{
+    background-image: url('/Assets/Revolution.jpg');
+}
+.Dead-Man-Blues-art{
+    background-image: url('/Assets/Dead-Man-Blues.jpg');
+}
+.Country-Boy-art{
+    background-image: url('/Assets/Chronolgy.jpg');
 }
 
 .list{
-    width: 250px;
+    width: 215px;
+    height: 324px;
+    margin-left: 30px;
+    margin-right: 30px;
     display: inline-flex;
     flex-direction: column;
     gap: 10px;
+    overflow-y: auto;
 }
 .item-select{
     display: none;
 }
 
 .image-display{
-    width: 240px;
-    height: 240px;
-    margin-left: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    width: 324px;
+    height: 324px;
 }
 .album-art {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     display: none; /*Hide images*/
 }
@@ -198,8 +359,60 @@ img{
 #Wetin:checked ~ .image-display #art3,
 #Revolution:checked ~ .image-display #art4,
 #Dead-Man-Blues:checked ~ .image-display #art5,
-#Somewhere-Wonderful:checked ~ .image-display #art6
-
+#Somewhere-Wonderful:checked ~ .image-display #art6,
+#Country-Boy:checked ~ .image-display #art7
 {
     display: block;
+}
+
+#hero{
+    width: min(99vw, 1500px);
+    min-height: 300px;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+}
+#hero img{
+    width: clamp(3.5rem, 50vw, 800px);
+    max-width: 100%;
+    height: auto;
+}
+#hero p{
+    font-family: "Roboto", sans-serif;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+/******Personal Development********/
+
+.personal-development{
+    width: min(99vw, 1500px);
+    min-height: 300px;
+    margin-top: 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+}
+.personal-development p{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#book-info{
+    min-width: 300px;
+    min-height: 350px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--container-color);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    
+}
+#book-info img{
+    border-radius: 6px;
 }
