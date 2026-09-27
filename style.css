@@ -120,16 +120,16 @@ ul.nav-links li{
 }
 
 .home-icon{
-    background-image: url('/Assets/home_100dp_000000_FILL0_wght700_GRAD200_opsz48.png');
+    background-image: url('../Assets/home_100dp_000000_FILL0_wght700_GRAD200_opsz48.png');
 }
 .pro-icon{
-    background-image: url('/Assets/work_100dp_000000_FILL0_wght700_GRAD200_opsz48.png');
+    background-image: url('../Assets/work_100dp_000000_FILL0_wght700_GRAD200_opsz48.png');
 }
 .personality-icon{
-    background-image: url('/Assets/cognition_2_100dp_000000_FILL0_wght700_GRAD200_opsz48.png');
+    background-image: url('../Assets/cognition_2_100dp_000000_FILL0_wght700_GRAD200_opsz48.png');
 }
 .dev-icon{
-    background-image: url('/Assets/commit_28dp_000000_FILL0_wght700_GRAD200_opsz24.png');
+    background-image: url('../Assets/commit_28dp_000000_FILL0_wght700_GRAD200_opsz24.png');
 }
 
 ul.nav-links li:hover{
@@ -309,22 +309,22 @@ div.home-container div{
     aspect-ratio: 1/1;
 }
 .Window-art{
-    background-image: url('/Assets/Window_Shopper.jpg');
+    background-image: url('../Assets/Window_Shopper.jpg');
 }
 .Kante-art{
-    background-image: url('/Assets/Kante.jpg');
+    background-image: url('../Assets/Kante.jpg');
 }
 .Wetin-art{
-    background-image: url('/Assets/Wetin.png');
+    background-image: url('../Assets/Wetin.png');
 }
 .Revolution-art{
-    background-image: url('/Assets/Revolution.jpg');
+    background-image: url('../Assets/Revolution.jpg');
 }
 .Dead-Man-Blues-art{
-    background-image: url('/Assets/Dead-Man-Blues.jpg');
+    background-image: url('../Assets/Dead-Man-Blues.jpg');
 }
 .Country-Boy-art{
-    background-image: url('/Assets/Chronolgy.jpg');
+    background-image: url('../Assets/Chronolgy.jpg');
 }
 
 .list{
