@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=cognition_2');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=commit');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=work');
+
 :root{
     --primary-bg: white;
     --font-color: #000000;
     --blur-color:rgba(211, 211, 211, 0.384);
     --container-color: #d9d9d931;
+    --roboto: ;
+    --main-font: 'Montserrat', sans-serif ;
 
 }
 body{
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif ;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -25,7 +24,7 @@ body::-webkit-scrollbar {
 }
 #master{
     margin-top: 80px;
-    padding: min(4vw, 40);
+    padding: min(4vw, 40px);
     width: 100vw;
     height: auto;
     display: flex;
@@ -43,15 +42,11 @@ body::-webkit-scrollbar {
     font-size: clamp(2.5rem, 4vw, 4rem);
     line-height: 0.9;
     letter-spacing: -0.06em;
+    text-align: start;
     vertical-align: middle;
 }
 /*******Home******/
 /*Navigation*/
-@media screen and (max-width: 800px) {
-    
-}
-
-
 header{
     display: flex;
     top: 0;
@@ -65,13 +60,9 @@ header{
     
 }
 
-header a.name{
+header a{
     text-decoration: none;
-    font-size: 18px;
-}
-
-a {
-    padding: 16px 16px;
+    padding: 12px 12px;
     text-decoration: none;
     color: var(--font-color);
     font-weight: bold;
@@ -120,16 +111,16 @@ ul.nav-links li{
 }
 
 .home-icon{
-    background-image: url('../Assets/home_100dp_000000_FILL0_wght700_GRAD200_opsz48.png');
+    background-image: url('Assets/home_100dp_000000_FILL0_wght700_GRAD200_opsz48.png');
 }
 .pro-icon{
-    background-image: url('../Assets/work_100dp_000000_FILL0_wght700_GRAD200_opsz48.png');
+    background-image: url('Assets/work_100dp_000000_FILL0_wght700_GRAD200_opsz48.png');
 }
 .personality-icon{
-    background-image: url('../Assets/cognition_2_100dp_000000_FILL0_wght700_GRAD200_opsz48.png');
+    background-image: url('Assets/cognition_2_100dp_000000_FILL0_wght700_GRAD200_opsz48.png');
 }
 .dev-icon{
-    background-image: url('../Assets/commit_28dp_000000_FILL0_wght700_GRAD200_opsz24.png');
+    background-image: url('Assets/commit_28dp_000000_FILL0_wght700_GRAD200_opsz24.png');
 }
 
 ul.nav-links li:hover{
@@ -138,7 +129,7 @@ ul.nav-links li:hover{
 }
 /*Content*/
 
-.home-container{
+.home{
     width: min(99vw, 1500px);
     border-radius: 15px;
     display: flex;
@@ -147,22 +138,21 @@ ul.nav-links li:hover{
     overflow: clip;
 }
 
-div.home-container div{
+div.home h1{
     height: auto;
     width: auto;
     flex: 1 1 620px;
-    font-size: clamp(3.5rem, 6vw, 8rem);
+    font-size: clamp(4.5rem, 7vw, 9rem);
     line-height: 0.9;
     letter-spacing: -0.06em;
     vertical-align: middle;
-    overflow: clip;
 }
 
-.home-container p{
+.home p{
     font-size: 50px;
     letter-spacing: 0em;
 }
-.home-container img{
+.home img{
         /* width: clamp(220px, 29vw, 420px);*/
     width: 350px;
     max-width: 100%;
@@ -173,7 +163,7 @@ div.home-container div{
     object-fit: contain;
 }
 /******Professional********/
-.professional-container{
+.professional{
     width: min(99vw, 1500px);
     min-height: 300px;
     border-radius: 15px;
@@ -182,17 +172,16 @@ div.home-container div{
     justify-content: space-between;
 }
 
-.professional-container img{
+.professional img{
     width: 350px;
     max-width: 100%;
     height: auto;
     border-style: solid;
     border-radius: 10px;
-    display: block;
     flex-shrink: 0;
     object-fit: contain;
 }
-.professional-container div{
+.professional div{
     height: auto;
     width: auto;
     margin-top: 50px;
@@ -200,7 +189,7 @@ div.home-container div{
     vertical-align: middle;
     overflow: hidden;
 }
-.professional-container a{
+.professional a{
     padding: 10px;
     position: relative;
     top: 40px;
@@ -214,7 +203,7 @@ div.home-container div{
     text-align: center;
 }
 
-.professional-container p{
+.professional p{
     position: relative;
     left: 4px;
 }
@@ -309,22 +298,22 @@ div.home-container div{
     aspect-ratio: 1/1;
 }
 .Window-art{
-    background-image: url('../Assets/Window_Shopper.jpg');
+    background-image: url('Assets/Window_Shopper.jpg');
 }
 .Kante-art{
-    background-image: url('../Assets/Kante.jpg');
+    background-image: url('Assets/Kante.jpg');
 }
 .Wetin-art{
-    background-image: url('../Assets/Wetin.png');
+    background-image: url('Assets/Wetin.png');
 }
 .Revolution-art{
-    background-image: url('../Assets/Revolution.jpg');
+    background-image: url('Assets/Revolution.jpg');
 }
 .Dead-Man-Blues-art{
-    background-image: url('../Assets/Dead-Man-Blues.jpg');
+    background-image: url('Assets/Dead-Man-Blues.jpg');
 }
 .Country-Boy-art{
-    background-image: url('../Assets/Chronolgy.jpg');
+    background-image: url('Assets/Chronolgy.jpg');
 }
 
 .list{
@@ -376,6 +365,7 @@ div.home-container div{
     width: clamp(3.5rem, 50vw, 800px);
     max-width: 100%;
     height: auto;
+    max-height: 500px;
 }
 #hero p{
     font-family: "Roboto", sans-serif;
@@ -385,10 +375,27 @@ div.home-container div{
     margin-top: 10px;
     margin-right: 10px;
 }
+#blog{
+    width: min(99vw, 1500px);
+    min-height: 300px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#blog p{
+    font-family: "Roboto", sans-serif;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+#blog a{
+    text-decoration: underline;
+}
 
 /******Personal Development********/
 
-.personal-development{
+.personal{
     width: min(99vw, 1500px);
     min-height: 300px;
     margin-top: 30px;
@@ -397,15 +404,25 @@ div.home-container div{
     align-items: top;
     justify-content: space-between;
 }
-.personal-development p{
+
+
+.book-refl{
     margin-top: 10px;
     margin-left: 10px;
+    font-family: "Roboto", sans-serif;
+    text-align: justify;
+    font-weight: 500;
+    font-size: clamp(20px, 1vw, 2rem);
+
 }
 
 #book-info{
-    min-width: 300px;
-    min-height: 350px;
+    width: clamp(350px, 1vw, 2rem);
+    min-width: 350px;
+    min-height: 360px;
+    max-height: 480px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     background-color: var(--container-color);
     backdrop-filter: blur(10px);
@@ -415,4 +432,10 @@ div.home-container div{
 }
 #book-info img{
     border-radius: 6px;
+}
+@media  screen and (max-width: 1000px) {
+    .personal div{
+        flex-direction: column;
+    }
+    
 }
